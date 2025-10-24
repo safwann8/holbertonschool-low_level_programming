@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-    for (char numbers = '1'; char numbers <= '10'; numbers++)
+    for (char digit = '1'; char digit <= '10'; digit++)
     {
-        printf("%d", numbers)
+        printf("%d", digit)
     }
 
     putchar ('\n');
