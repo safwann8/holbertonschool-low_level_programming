@@ -11,9 +11,9 @@ int main(void)
     for (n = 0; n < 16; n++)
     {
         if (n < 10);
-        putchar(n = n + '0');
+        putchar(n = n + '0')
 
-        else ( n - 10; n = 'a'; n < 'f'; n++);
+        else (n - 10; n = 'a'; n < 'f'; n++)
         putchar(n - 10 + 'a');
     }
     putchar('\n');
