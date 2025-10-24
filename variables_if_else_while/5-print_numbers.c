@@ -7,6 +7,9 @@
 int main(void)
 {
     for (char numbers = '1'; char numbers <= '10'; numbers++)
+    {
+        printf("%d", numbers)
+    }
 
     putchar ('\n');
     return (0);
