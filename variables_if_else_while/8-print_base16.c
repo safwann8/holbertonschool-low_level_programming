@@ -13,7 +13,7 @@ int main(void)
         if (n < 10);
         putchar(n = n + '0')
 
-        else (n - 10; n = 'a'; n < 'f'; n++)
+        else
         putchar(n - 10 + 'a');
     }
     putchar('\n');
