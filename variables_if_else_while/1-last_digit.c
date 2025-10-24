@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-/*
+/**
 * main - Prints the last digit
 *
 * Return: Always 0 (success)
@@ -10,18 +10,19 @@
 int main(void)
 {
     int n;
-    int last digit;
+    int last_digit;
 
     srand(time(0));
 	n = rand() - RAND_MAX / 2;
+    last_digit = n % 10;
 
-    printf("last digit of %d is %d", n, last digit);
+    printf("last_digit of %d is %d", n, last_digit);
 
-    if (last digit > 5)
+    if (last_digit > 5)
     {
         printf("and is greater than 5\n");
     }
-    eslse if (last digit == 0)
+    eslse if (last_digit == 0)
     {
         printf("and is 0\n");
     }
