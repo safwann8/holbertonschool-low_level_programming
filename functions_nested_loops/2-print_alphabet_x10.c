@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
-* main - Write a function that prints 10 times the alphabet, in lowercase,
-*        followed by a new line.
-*
-* Return: nothing (void)
-*/
+ * print_alphabet_x10 - prints the alphabet in lowercase 10 times
+ *
+ * Description: prints the lowercase alphabet 10 times, followed by a new line,
+ * using only _putchar twice in the code.
+ */
 void print_alphabet_x10(void)
 {
 	int i;
