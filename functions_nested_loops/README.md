@@ -1,1 +1,1 @@
-prototypes, functions 
+# C - Functions, nested loops
