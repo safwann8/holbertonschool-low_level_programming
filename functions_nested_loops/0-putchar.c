@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
-* main - Écrivez un programme qui affiche _putchar, suivi d'une nouvelle ligne.
+* main - Écrivez un programme qui affiche _putchar,
+*        suivi d'une nouvelle ligne.
 *
 * Return: Always 0 (success)
 */
