@@ -13,7 +13,7 @@
  * Return: void
  */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
     while (n !+ 98)
     {
