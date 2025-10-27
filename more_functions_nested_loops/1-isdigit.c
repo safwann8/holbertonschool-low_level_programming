@@ -5,7 +5,7 @@
 * _isigit - Write a function that checks for a digit (0 through 9).
 * @c the digit to check
 *
-* Return: (1) if digit (0) otherdigit
+* Return: 1 if digit, 0 otherwise
 */
 int _isdigit(int c)
 {
