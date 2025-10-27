@@ -10,7 +10,7 @@
  *
  * Return: void
  */
-void jack_bauer(void n)
+void jack_bauer(void)
 
 int hour;
 int minute;
