@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
-* _isigit - Write a function that checks for a digit (0 through 9).
-* @c the digit to check
+* _isdigit - Write a function that checks for a digit (0 through 9).
+* @c: the digit to check
 *
 * Return: 1 if digit, 0 otherwise
 */
