@@ -6,10 +6,14 @@
  * @src: Pointer to the source string.
  * @n: Maximum number of bytes to append from src.
  *
- * Description: This function appends at most n characters from the string
- * pointed to by src to the string pointed to by dest. It overwrites the
- * terminating null byte at the end of dest and adds a new terminating null byte.
- * The src string does not need to be null-terminated if it contains n or more bytes.
+ * Description: This function appends at most n
+ * characters from the string
+ * pointed to by src to the string pointed to by dest.
+ * It overwrites the
+ * terminating null byte at the end of dest
+ * and adds a new terminating null byte.
+ * The src string does not need to be null-terminated if
+ * it contains n or more bytes.
  *
  * Return: Pointer to the resulting string dest.
  */
