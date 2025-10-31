@@ -10,7 +10,7 @@
  *   - un nombre négatif si s1 est inférieure à s2,
  *   - 0 si les deux chaînes sont identiques,
  *   - un nombre positif si s1 est supérieure à s2.
- * Le comportement est identique à celui de la fonction strcmp du
+ * Le comportement est identique à celui de la fonction de comparaison de chaine du
  * standard C.
  *
  * Return: Un entier négatif, nul ou positif selon le résultat de la comparaison.
