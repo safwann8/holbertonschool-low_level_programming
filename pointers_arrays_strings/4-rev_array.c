@@ -18,11 +18,6 @@ void reverse_array(int *a, int n)
 	int tmp;
 	int start = 0, end;
 
-	while (a[n] != '\0')
-		n++;
-
-	end = n - 1;
-
 	while (start < end)
 	{
 		tmp = a[start];
