@@ -6,8 +6,8 @@
  *
  * Description: This function traverses the string pointed to by @str
  * and converts the first character of each word to uppercase if it is
- * a lowercase letter. Words are considered to be separated by the 
- * following characters: space, tabulation, new line, ',', ';', '.', 
+ * a lowercase letter. Words are considered to be separated by the
+ * following characters: space, tabulation, new line, ',', ';', '.',
  * '!', '?', '"', '(', ')', '{', and '}'.
  *
  * Return: A pointer to the modified string @str.
@@ -28,12 +28,12 @@ char *cap_string(char *str)
 
 		for (j = 0; tab[j] != '\0'; j++)
 		{
-			if (str[i] == tab[j] && str[i+1] >= 'a' && str[i+1] <= 'z')
+			if (str[i] == tab[j] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
-				str[i+1] = str[i+1] - 32;
+				str[i + 1] = str[i + 1] - 32;
 			}
 		}
 		i++;
 	}
-	return str;
+	return (str);
 }
