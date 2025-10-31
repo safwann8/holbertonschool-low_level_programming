@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * string_toupper - Change toutes les lettres minuscules d’une chaîne en majuscules.
+ * string_toupper - Change toutes les lettres
+ * minuscules d’une chaîne en majuscules.
  * @str: Pointeur vers la chaîne de caractères à modifier.
  *
  * Description: Cette fonction parcourt la chaîne pointée par @str
