@@ -6,7 +6,8 @@
  *
  * Description: This function extracts the first integer found in the string
  * pointed to by @s. It handles multiple '+' and '-' signs before the number,
- * and stops conversion when a non-digit character is encountered after the number.
+ * and stops conversion when a non-digit character is encountered after
+ * the number.
  * If no digits are found, it returns 0.
  *
  * Return: The integer value of the number found in the string, or 0 if none.
