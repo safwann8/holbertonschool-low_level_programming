@@ -38,9 +38,9 @@ int _sqrt_recursion(int n)
 int _sqrt_helper(int n, int i)
 {
     if (i * i > n)
-        return -1;
+        return (-1);
     else if (i * i == n)
-        return i;
+        return (i);
     else
         return _sqrt_helper(n, i + 1);
 }
