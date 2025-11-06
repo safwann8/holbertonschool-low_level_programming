@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argc;  /* évite le warning si argc n'est pas utilisé */
+	(void)argc;
 	printf("%s\n", argv[0]);
 	return (0);
 }
