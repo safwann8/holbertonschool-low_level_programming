@@ -6,8 +6,10 @@
  * @y: exposant entier
  *
  * Description:
- * Cette fonction retourne le résultat de x à la puissance y en utilisant la récursion.
- * - Si y est inférieur à 0, elle retourne -1 pour indiquer une erreur.
+ * Cette fonction retourne le résultat de x à la
+ * puissance y en utilisant la récursion.
+ * - Si y est inférieur à 0, elle retourne
+ * -1 pour indiquer une erreur.
  * - Si y est égal à 0, elle retourne 1 (cas de base, car x^0 = 1).
  * - Sinon, elle retourne x multiplié par le résultat de la fonction appelée
  *   avec y - 1 (récursion descendante).
