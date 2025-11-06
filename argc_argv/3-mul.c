@@ -12,7 +12,8 @@
  * les convertit en entiers, puis affiche le résultat de leur multiplication.
  *
  * - Si le programme reçoit **exactement deux arguments** :
- *     il les convertit avec `atoi()` et affiche leur produit suivi d’un saut de ligne.
+ *     il les convertit avec `atoi()` et affiche
+ * leur produit suivi d’un saut de ligne.
  *
  * - Si le programme ne reçoit **pas deux arguments** :
  *     il affiche "Error" suivi d’un saut de ligne et retourne 1.
@@ -30,18 +31,18 @@
 
 int main(int argc, char *argv[])
 {
-    int a, b, result;
+	int a, b, result;
 
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (1);
-    }
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-    a = atoi(argv[1]);
-    b = atoi(argv[2]);
-    result = a * b;
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	result = a * b;
 
-    printf("%d\n", result);
-    return (0);
+	printf("%d\n", result);
+	return (0);
 }
