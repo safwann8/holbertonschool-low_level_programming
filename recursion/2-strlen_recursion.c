@@ -5,8 +5,10 @@
  * @s: pointeur vers la chaîne dont on veut connaître la longueur
  *
  * Description:
- * Cette fonction détermine la longueur d'une chaîne en utilisant la récursion.
- * Elle compte un caractère à chaque appel, jusqu'à atteindre le caractère
+ * Cette fonction détermine la longueur d'une chaîne en
+ * utilisant la récursion.
+ * Elle compte un caractère à chaque appel,
+ * jusqu'à atteindre le caractère
  * nul '\0' qui marque la fin de la chaîne.
  *
  * Return: la longueur de la chaîne (nombre de caractères avant '\0')
