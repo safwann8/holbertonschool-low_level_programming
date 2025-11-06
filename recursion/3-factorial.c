@@ -5,9 +5,9 @@
  * @n: nombre dont on veut calculer le factoriel
  *
  * Description:
- * Cette fonction retourne le factoriel du nombre n 
+ * Cette fonction retourne le factoriel du nombre n
  *en utilisant la récursion.
- * - Si n est inférieur à 0, la fonction retourne -1 
+ * - Si n est inférieur à 0, la fonction retourne -1
  *pour indiquer une erreur.
  * - Si n est égal à 0, le résultat est 1
  * (cas de base du factoriel).
