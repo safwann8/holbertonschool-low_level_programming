@@ -7,7 +7,7 @@
  * @n: Nombre d’octets à remplir dans la zone mémoire.
  *
  * Description: Cette fonction remplit les n premiers octets de la zone
- * mémoire pointée par @s avec la valeur constante @b. 
+ * mémoire pointée par @s avec la valeur constante @b.
  * Elle retourne un pointeur vers la zone mémoire @s.
  *
  * Return: Un pointeur vers la mémoire remplie (s).
