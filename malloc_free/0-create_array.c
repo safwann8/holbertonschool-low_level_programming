@@ -2,16 +2,21 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates an array of chars and initializes it with a specific char
+ * create_array - creates an array of chars
+ * and initializes it with a specific char
  * @size: the size of the array to create
  * @c: the character used to initialize the array
  *
  * Description:
- * This function allocates memory for an array of chars of the given size.
- * Each element of the array is initialized with the character 'c'.
- * If size is equal to 0, or if memory allocation fails, the function returns NULL.
+ * This function allocates memory for an array of
+ * chars of the given size.
+ * Each element of the array is initialized
+ * with the character 'c'.
+ * If size is equal to 0, or if memory allocation
+ * fails, the function returns NULL.
  *
- * Return: pointer to the newly created array, or NULL if it fails
+ * Return: pointer to the newly created array,
+ * or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
