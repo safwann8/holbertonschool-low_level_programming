@@ -28,8 +28,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	int P= 0;
-	int Q= 0;
+	int P = 0;
+	int Q = 0;
 	int i = 0;
 	int j = 0;
 	int k = 0;
