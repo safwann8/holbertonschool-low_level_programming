@@ -8,7 +8,8 @@
  * @n: nombre de caractères de s2 à ajouter à s1
  *
  * Description: Alloue dynamiquement une nouvelle chaîne contenant s1,
- * suivie des n premiers caractères de s2 (ou toute s2 si n >= longueur de s2).
+ * suivie des n premiers caractères de
+ * s2 (ou toute s2 si n >= longueur de s2).
  * Si s1 ou s2 vaut NULL, ils sont traités comme des chaînes vides.
  *
  * Return: pointeur vers la nouvelle chaîne, ou NULL si échec de malloc
