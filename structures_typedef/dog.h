@@ -6,15 +6,15 @@
  * @name: pointer to the dog's name
  * @age: age of the dog
  * @owner: pointer to the owner's name
- *
- * Description: Defines a dog with a name, age, and owner.
  */
 struct dog
 {
-	char *name;
-	float age;
-	char *owner;
+    char *name;
+    float age;
+    char *owner;
 };
+
+typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
