@@ -3,9 +3,25 @@
 #include <stdarg.h>
 
 /**
- * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ * print_all - Prints a variable number of arguments based on a format string.
+ * @format: A constant string containing the argument types.
+ *
+ * Description:
+ * This function parses the format string and prints each corresponding
+ * argument using the correct conversion:
+ *   'c' → char
+ *   'i' → integer
+ *   'f' → float
+ *   's' → string (prints "(nil)" if the string is NULL)
+ *
+ * Any unknown type specifier is ignored.
+ * A comma and a space are printed between valid arguments.
+ *
+ * The function ends by printing a newline.
+ *
+ * Return: Nothing.
  */
+
 void print_all(const char * const format, ...)
 {
 	va_list args;
