@@ -1,39 +1,86 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include <stdio.h>
 #include <stdarg.h>
-
-int sum_them_all(const unsigned int n, ...);
-
-void print_numbers(const char *separator, const unsigned int n, ...);
-
-void print_strings(const char *separator, const unsigned int n, ...);
-
-void print_all(const char * const format, ...);
+#include "variadic_functions.h"
 
 /**
-* struct printer - Structure for printing different types
-* @c: The format specifier
-* @f: The function pointer to print the type
-*/
-	typedef struct printer
-	{
-		char *c;
+ * print_char - Prints a char
+ * @arg: A va_list containing the char to print
+ */
+void print_char(va_list arg)
+{
+	printf("%c", va_arg(arg, int));
+}
 
-		void (*f)(va_list);
-	} print_t;
+/**
+ * print_int - Prints an int
+ * @arg: A va_list containing the int to print
+ */
+void print_int(va_list arg)
+{
+	printf("%d", va_arg(arg, int));
+}
 
-int sum_them_all(const unsigned int n, ...);
+/**
+ * print_float - Prints a float
+ * @arg: A va_list containing the float to print
+ */
+void print_float(va_list arg)
+{
+	printf("%f", va_arg(arg, double));
+}
 
-void print_numbers(const char *separator, const unsigned int n, ...);
+/**
+ * print_string - Prints a string
+ * @arg: A va_list containing the string to print
+ */
+void print_string(va_list arg)
+{
+	char *str = va_arg(arg, char *);
 
-void print_strings(const char *separator, const unsigned int n, ...);
+		if (str == NULL)
+		{
+			printf("(nil)");
+			return;
+		}
+		printf("%s", str);
+}
 
-void print_all(const char * const format, ...);
+/**
+ * print_all - Prints anything based on the format provided
+ * @format: A string of characters representing the argument types
+ *          ('c' for char, 'i' for int, 'f' for float, 's' for string)
+ */
+void print_all(const char * const format, ...)
+{
+	va_list args;
+	unsigned int i = 0;
+	unsigned int j;
+	char *separator = "";
 
-/* Fonctions d'impression pour chaque type */
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
+	print_t p[] = {
+	{"c", print_char},
+	{"i", print_int},
+	{"f", print_float},
+	{"s", print_string},
+	{NULL, NULL}};
 
-#endif
+	va_start(args, format);
+
+		while (format && format[i])
+		{
+			j = 0;
+			while (p[j].c)
+			{
+				if (format[i] == p[j].c[0])
+				{
+					printf("%s", separator);
+					p[j].f(args);
+					separator = ", ";
+				}
+				j++;
+			}
+			i++;
+		}
+	printf("\n");
+	va_end(args);
+}
