@@ -3,45 +3,88 @@
 #include <stdio.h>
 
 /**
- * print_all - Affiche n'importe quel type de paramètre selon format
- * @format: Chaîne qui indique le type des paramètres passés
+ * print_char - Affiche un char depuis va_list
+ * @ap: liste d'arguments variadiques
+ */
+static void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_int - Affiche un int depuis va_list
+ * @ap: liste d'arguments variadiques
+ */
+static void print_int(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - Affiche un float depuis va_list
+ * @ap: liste d'arguments variadiques
+ */
+static void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_string - Affiche une string depuis va_list
+ * @ap: liste d'arguments variadiques
+ */
+static void print_string(va_list ap)
+{
+	char *s = va_arg(ap, char *);
+
+	if (!s)
+		s = "(nil)";
+	printf("%s", s);
+}
+
+/**
+ * print_all - Affiche des paramètres variadiques selon le format
+ * @format: Chaîne qui indique le type des paramètres ('c', 'i', 'f', 's')
  *
  * Description:
- * 'c' : char
- * 'i' : int
- * 'f' : float
- * 's' : char * (si NULL, affiche "(nil)")
- * Autres caractères sont ignorés.
- * Les valeurs sont séparées par ", ". Retour à la ligne à la fin.
+ * - 'c' : char
+ * - 'i' : int
+ * - 'f' : float
+ * - 's' : char * (affiche "(nil)" si NULL)
+ * Les autres caractères sont ignorés.
+ * Les valeurs sont séparées par ", " et suivi d'un retour à la ligne.
  */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	unsigned int i = 0;
-	char *str;
+	unsigned int i = 0, j;
 	char *sep = "";
 
 	va_start(ap, format);
 
 	while (format && format[i])
 	{
-		if (format[i] == 'c')
-			printf("%s%c", sep, va_arg(ap, int));
-		if (format[i] == 'i')
-			printf("%s%d", sep, va_arg(ap, int));
-		if (format[i] == 'f')
-			printf("%s%f", sep, va_arg(ap, double));
-		if (format[i] == 's')
+		j = 0;
+		while (j < 4)
 		{
-			str = va_arg(ap, char *);
-			if (!str)
-				str = "(nil)";
-			printf("%s%s", sep, str);
+			if ((format[i] == "cifs"[j]))
+			{
+				printf("%s", sep);
+				if (j == 0)
+					print_char(ap);
+				else if (j == 1)
+					print_int(ap);
+				else if (j == 2)
+					print_float(ap);
+				else
+					print_string(ap);
+				sep = ", ";
+			}
+			j++;
 		}
-		sep = ", ";
 		i++;
 	}
 
-	printf("\n");
 	va_end(ap);
+	printf("\n");
 }
