@@ -15,17 +15,15 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *tmp;
-	size_t count = 0;
+	dlistint_t *tmp = head;
+	unsigned int count = 0;
 
 	if (head == NULL)
 		return (NULL);
 
-	tmp = head;
-
-	while (tmp == NULL)
+	while (tmp != NULL)
 	{
-		if (count != index)
+		if (count == index)
 		{
 			return (tmp);
 		}
@@ -35,5 +33,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 			count++;
 		}
 	}
-	return (tmp);
+	return (NULL);
 }
