@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - Ajoute un nouveau nœud à la fin d’une liste dlistint_t
+ * add_dnodeint_end - Ajoute un nouveau nœud à la fin
+ * d’une liste dlistint_t
  * @head: Double pointeur vers la tête de la liste
  * @n: Valeur à stocker dans le nouveau nœud
  *
@@ -37,7 +38,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	temp = *head;
 	while (temp->next != NULL)
 		temp = temp->next;
-	
+
 	temp->next = nn;
 	nn->prev = temp;
 
