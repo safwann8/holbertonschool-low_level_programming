@@ -1,19 +1,51 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - supprime le nœud à l'index donné d'une liste doublement chaînée
- * @head: pointeur vers le pointeur du premier nœud de la liste
- * @index: index du nœud à supprimer (commence à 0)
+ * delete_dnodeint_at_index - Supprime le nœud à
+ * l’index donné dans une liste dlistint_t
+ * @head: Pointeur vers le pointeur du premier nœud de la liste
+ * @index: Index du nœud à supprimer (index commence à 0)
  *
- * Description: La fonction parcourt la liste pour trouver le nœud à l'index spécifié.
- *              Si le nœud existe, elle met à jour les pointeurs des nœuds voisins
- *              (prev et next), libère la mémoire du nœud et retourne 1.
- *              Si le nœud n'existe pas ou si la liste est vide, retourne -1.
+ * Description: Cette fonction parcourt la liste
+ * jusqu’au nœud situé à l’index
+ * donné. Elle met ensuite à jour les
+ * pointeurs prev et next des nœuds voisins,
+ * libère la mémoire du nœud supprimé et
+ * maintient l’intégrité de la liste.
  *
- * Retour: 1 si la suppression a réussi, -1 si elle a échoué.
+ * Return: 1 si la suppression a réussi, -1 si elle a échoué
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-    
+	dlistint_t *current;
+	unsigned int i;
+
+	if (head == NULL || *head == NULL)
+		return (-1);
+
+	current = *head;
+
+	if (index == 0)
+	{
+		*head = current->next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
+		free(current);
+		return (1);
+	}
+
+	for (i = 0; current != NULL && i < index; i++)
+		current = current->next;
+
+	if (current == NULL)
+		return (-1);
+
+	if (current->prev != NULL)
+		current->prev->next = current->next;
+	if (current->next != NULL)
+		current->next->prev = current->prev;
+
+	free(current);
+	return (1);
 }
